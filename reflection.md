@@ -1,0 +1,10 @@
+https://github.com/egumerlock/egumerlock.github.io/
+
+What did you learn about CSS padding, borders, and margin by doing this challenge?
+I learned that manipulating CSS is not as easy as it seems.  But there are also many ways to achieve similar results, you just have to find which one suits you with the design you have in mind.  Borders are extremely useful, and also very cool looking if they are set to a hover.  Margin will take getting used to as well as you can set it to both percentage of the elements or pixel width.  It will take a lot of time to become a master with all of these elements.
+What did you learn about CSS positioning?
+CSS positioning is a very delicate thing, and also has many different ways to be implemented.  Some of the many are display, position, and simply just using margins.  The hardest part of my challenge was trying to get the sidebar on my blog site to stay on the right, next to the paragraph of text.  It took a very long time to figure out the answer.
+What aspects of your design did you find easiest to implement? What was most difficult?
+The easiest was implementing the color scheme and font-sizes.  That was a breeze.  What is hard is positioning the elements where you want them on your page, and also having them move the way you want them to when the browser size changes.  That was by far the most difficult and frustrating part.
+What did you learn about adding and formatting elements with CSS in this challenge?
+I think I got a little carried away with adding elements.  I learned however, that a default CSS can be set, even though I do not like that as it actually overrides an empty formatting element.  If CSS is linear, shouldnt a blank formatting element override a previous format?  Just seems logical that way, however, since the default exists, it will automatically go back to the default.  This was by far one of the most enlightening challenges.
