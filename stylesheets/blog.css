@@ -79,6 +79,10 @@ body nav section span {
   -webkit-transform:scale(1,1.23); /* Safari and Chrome */
 }
 
+.by {
+  font-family: Fira Sans;
+}
+
 #content {
   font-family: Fira Sans;
   margin-left: 7%;
@@ -87,11 +91,12 @@ body nav section span {
   width: 58%;
   display: inline-block;
   clear: right;
-  background-color: #D0D0D0;
+  background-color: white;
   line-height: 2;
   padding: 20px 20px 20px 20px;
   margin-bottom: 200px;
   box-shadow: 5px 5px 5px #D0D0D0;
+  border: 2px solid #D0D0D0;
 }
 
 #content:hover {
