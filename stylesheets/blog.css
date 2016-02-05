@@ -3,7 +3,7 @@
   color: #07B1EF;
   font-size: 25px;
   -webkit-transform:scale(1,1.23); /* Safari and Chrome */
-
+  border-radius: 5px;
 }
 
 body {
