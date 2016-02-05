@@ -18,10 +18,10 @@ body {
   box-shadow: 5px 5px 5px;
   margin-left: 60px;
   margin-right: 60px;
-  margin-top: -10px;
-  letter-spacing: 3px;
+  margin-top: -30px;
+  letter-spacing: 5px;
   text-shadow: .5px .5px .5px #07B1EF;
-  border-radius: 12px;
+  border-radius: 8px;
   -webkit-transform:scale(1,1.23); /* Safari and Chrome */
 }
 
@@ -63,12 +63,13 @@ nav div {
 }
 
 #button {
-  font-family: Futura;
+  font-family: Fira Sans;
   text-decoration: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   vertical-align: middle;
   line-height: 100px;
+  letter-spacing: 5px;
 
 
 }
