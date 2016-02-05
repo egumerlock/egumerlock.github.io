@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Fira Sans;
+    src: "https://fonts.googleapis.com/css?family=Fira+Sans" format "opentype";
+}
+p.customfont {
+    font-family: Fira Sans, Verdana, Tahoma;
+}
+
 body {
   background-color: #252B2E;
 }
