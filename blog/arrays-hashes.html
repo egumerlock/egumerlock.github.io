@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Blog Post #1</title>
+</head>
+
+<body>
+  <section class="header">
+    <h1> ERIC GUMERLOCK <span> WEB DEVELOPER</span></h1>
+  </section>
+  <nav id="center-div">
+    <a href="http://egumerlock.github.io/index"><div id="button">HOME</div></a>
+    <a href="#"><div id="button">PROJECTS</div></a>
+    <a href="#"><div id="button">ABOUT</div></a>
+    <a href="#"><div id="button">CONTACT</div></a>
+    <a href="http://egumerlock.github.io/blog/"><div id="button">BLOG</div></a>
+  </nav>
+
+  <nav><section id="secondarynav">
+    <p><a href="http://egumerlock.github.io/index">HOME</a> < <a href="http://egumerlock.github.io/blog/">BLOG INDEX</a> < <span>Arrays and Hashes in Ruby</span></p></section>
+  </nav>
+
+  <aside>
+    <div id="sidebar">
+      <h6><span id="sidebarheader">OTHER RECENT POSTS</span></h6>
+      <ul><span id="sidebarlinks">
+        <li><a href="http://egumerlock.github.io/blog/git.html">Git, Version Control, and GitHub</a></li>
+        <li><a href="http://egumerlock.github.io/blog/css-concepts.html">Inline vs. Inline-block</a></li>
+        <li><a href="#">Arrays and Hashes in Ruby</a></li>
+        <li><a href="#">Independence</a></li>
+      </span>
+    </ul>
+  </div>
+</aside>
+
+<section>
+  <h1 class="blogheader">Arrays and Hashes in Ruby</h1>
+  <p><div id="content">
+    <h4 class="by">February 10th, 2016 <br>By Eric Gumerlock </h4>
+
+
+    <p>It can sometimes be confusing in Ruby when you are thinking of organizing data, whether to use arrays or hashes.  Both are useful, but just for different applications.  Lets begin by defining both and array and a hash.  An array is a set of data created by setting a variable equal to a bracket of data separated by commas, like this <code>my_array = [“my”, “job”, “fun”]</code>.  Each of those strings is a value, and each is automatically indexed by integers, starting at 0, and increasing by 1.  So “my” has the key 0, “job” has the key 1, and “fun” has the key 2.  These can be called by <code>writing my_array[1]</code> which will return “job”.  Each key can only have one value, so if you attempt to overwrite one of the pieces of data, say my_array[1] = “going home”, Ruby will overwrite “job” with “going home”.
+    </p>
+    <p>
+      A hash is like a next level array.  You can customize the key of each value, with a string or symbol.  Also, a key can contain a number of elements, such as an array.  Lets get into a few commands before the theory gets too confusing.  You make a hash like so <code> my_hash = {“key” => “value”,
+      “John” => “Smith”} </code>
+      This would create a key of “John”, with value “Smith” and a key of “key” with value “value”.  There are also other ways to create a hash, such as <code>my_hash = Hash.new</code> and later you are able to add key/value pairs with this notation <code> my_hash[“John”] = “Smith”</code>.  And to call that value, its simply <code> my_hash[“John”]</code> to see what its value is.
+    </p>
+    <p>
+      So when do we use arrays and hashes?  Well if you have a data set, say a bunch of numbers that are related in some way, you probably want to use an array.  If each of those numbers corresponds to a person, like age for example, we would rather make a hash since you can index the ages by name, using names as keys and ages as values.  Basically, if your data needs to be labeled using a string or a symbol, you want to use a hash.  But if you are dealing with only numerical values, an array is more appropriate.  An array is also good for holding a lot of random data, numbers, strings, etc., but with a very simplistic index of integers.  Sometimes this is great for organizing random and unorganized data first.
+    </p>
+  </p></div>
+</section>
+
+
+<footer>
+  <div id="footer">
+    <p><span>FOOTER</span>
+      <a href="www.github.com"><img id="problem" src="../imgs/githubxxl.png" height="44" width="44" /></a>
+      <a href="www.linkedin.com"><img src="../imgs/linkedin.png" height="45" width="45" /></a>
+      <a href="www.facebook.com"><img src="../imgs/fb_original.png" height="45" width="45" /></a>
+
+    </p></div>
+
+  </footer>
+
+</body>
+
+
+
+
+</html>

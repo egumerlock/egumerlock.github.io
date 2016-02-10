@@ -5,6 +5,7 @@ ul {
   margin-left: 10%;
   box-shadow: 5px 5px 5px #07B1EF;
   color: white;
+  margin-top: -25px;
 }
 
 ul:hover {
