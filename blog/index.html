@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-    <title>Blog</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blogindex.css">
+  <title>Eric's Technical Blog</title>
+</head>
 
 
-  <body>
-    <section>
-      <h1>BLOG</h1>
-    </section>
-    <nav>
-      <a href="http://egumerlock.github.io/index">HOME</a>
-      <a href="#">PROJECTS</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
-      <a href="#">BLOG</a>
-    </nav>
-    <section>
-      <h3>STAY UP TO DATE -- WITH ERIC'S TECHNICAL BLOG!!</h3>
-      <ul>
-        <li><a href="http://egumerlock.github.io/blog/git.html">Blog 1</a></li>
-        <li><a href="http://egumerlock.github.io/blog/css-concepts.html">Inline vs. Inline-block</a></li>
-        <li><a href="#">Blog 3</a></li>
-        <li><a href="#">Blog 4</a></li>
-        <li><a href="#">Blog 5</a></li>
-        <li><a href="#">Blog 6</a></li>
-        <li><a href="#">Blog 7</a></li>
-      </ul>
-    </section>
+<body>
+  <section class="header">
+    <h1>ERIC GUMERLOCK <span>WEB DEVELOPER</span></h1>
+  </section>
+  <nav id="center-div">
+    <a href="http://egumerlock.github.io/index"><div id="button">HOME</div></a>
+    <a href="#"><div id="button">PROJECTS</div></a>
+    <a href="#"><div id="button">ABOUT</div></a>
+    <a href="#"><div id="button">CONTACT</div></a>
+    <a href="#"><div id="button">BLOG</div></a>
+  </nav>
+  <nav><section id="secondarynav">
+    <p><a href="http://egumerlock.github.io/index">HOME</a> < <span>BLOG INDEX</span></p></section>
+  </nav>
 
 
-    <footer>
-      <p>FOOTER</p>
-      <a href="#"><img src="#" /></a>
-      <a href="#"><img src="#" /></a>
-      <a href="#"><img src="#" /></a>
+  <section>
+    <h3 class="blogheader">ERIC'S TECHNICAL BLOG</h3>
+    <ul>
+      <li><a href="http://egumerlock.github.io/blog/git.html">Git, Version Control, and GitHub</a></li>
+      <li><a href="http://egumerlock.github.io/blog/css-concepts.html">Inline vs. Inline-block</a></li>
+      <li><a href="#">Blog 3</a></li>
+      <li><a href="#">Blog 4</a></li>
+      <li><a href="#">Blog 5</a></li>
+      <li><a href="#">Blog 6</a></li>
+      <li><a href="#">Blog 7</a></li>
+    </ul>
+  </section>
+
+
+  <footer>
+    <div id="footer">
+      <p><span>FOOTER</span>
+        <a href="www.github.com"><img id="problem" src="../imgs/githubxxl.png" height="44" width="44" /></a>
+        <a href="www.linkedin.com"><img src="../imgs/linkedin.png" height="45" width="45" /></a>
+        <a href="www.facebook.com"><img src="../imgs/fb_original.png" height="45" width="45" /></a>
+
+      </p></div>
+
     </footer>
-
   </body>
-</html>
+  </html>
