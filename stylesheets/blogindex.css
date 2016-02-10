@@ -1,0 +1,21 @@
+ul {
+  background-color: #252B2E;
+  width: 50%;
+  margin-bottom: 150px;
+  margin-left: 10%;
+  box-shadow: 5px 5px 5px #07B1EF;
+  color: white;
+}
+
+ul:hover {
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FAAC36;
+
+}
