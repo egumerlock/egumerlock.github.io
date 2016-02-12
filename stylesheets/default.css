@@ -2,36 +2,65 @@
     font-family: "Fira Sans";
     src: https://fonts.googleapis.com/css?family=Fira+Sans format "opentype";
 }
+@font-face {
+    font-family: "Crimson Text";
+    src: https://fonts.googleapis.com/css?family=Rock+Salt("Crimson Text");
+}
+
+
+
 p.customfont {
     font-family: "Fira Sans", Verdana, Tahoma;
+    font-family: "Crimson Text", serif;
+
 }
 
 body {
   background-color: #252B2E;
 }
 
+h1, h2, h3
+{
+font-weight: normal;
+}
+
 .header {
   font-family: Fira Sans;
   font-size: 25px;
+
   line-height: .85;
   color: #07B1EF;
-  box-shadow: 5px 5px 5px;
-  margin-left: 60px;
-  margin-right: 60px;
+  box-shadow: 5px 5px 5px #07B1EF;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: -10px;
-  letter-spacing: 5px;
-  text-shadow: .5px .5px .5px #07B1EF;
+  letter-spacing: 10px;
+  padding-bottom: 1px;
+  padding-left: 3%;
+  padding-right: 0%;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  text-shadow: 100px 0px 14px #D0D0D0;
   border-radius: 8px;
   -webkit-transform:scale(1,1.23); /* Safari and Chrome */
+
+
+
+
 }
 
 
 
 body h1 span {
-  font-size: 30px;
+  font-family: Fira Sans;
+  font-size: 15px;
   float: right;
   margin-right: 50px;
-  text-shadow: 0px 0px 0px;
+  color: #07B1EF;
+  font-style: normal;
+  letter-spacing: 5px;
+  text-shadow: 15px -10px 18px #D0D0D0;
+
 }
 
 body h1 span:hover {
@@ -121,6 +150,8 @@ body section h3 div {
   padding-bottom: 50px;
 
 
+
+
 }
 
 #horizontal {
@@ -151,11 +182,11 @@ body section h3 div {
 }
 
 footer div span {
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 5%;
   vertical-align: top;
   margin-top: 10px;
-  color: #949391;
+  color: #D0D0D0;
   font-family: Fira Sans;
   display: inline-block;
 
