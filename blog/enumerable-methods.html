@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Ruby Enumerable Methods: group_by</title>
+</head>
+
+<body>
+  <section class="header">
+    <h1> ERIC GUMERLOCK <span> WEB DEVELOPER</span></h1>
+  </section>
+  <nav id="center-div">
+    <a href="http://egumerlock.github.io/index"><div id="button">HOME</div></a>
+    <a href="#"><div id="button">PROJECTS</div></a>
+    <a href="#"><div id="button">ABOUT</div></a>
+    <a href="http://egumerlock.github.io/contact/"><div id="button">CONTACT</div></a>
+    <a href="http://egumerlock.github.io/blog/"><div id="button">BLOG</div></a>
+  </nav>
+
+
+  <nav><section id="secondarynav">
+    <p><a href="http://egumerlock.github.io/index">HOME</a> < <a href="http://egumerlock.github.io/blog/">BLOG INDEX</a> < <span>Ruby Enumerable Methods: group_by</span></p></section>
+  </nav>
+
+  <aside>
+    <div id="sidebar">
+      <h6><span id="sidebarheader">OTHER RECENT POSTS</span></h6>
+      <ul><span id="sidebarlinks">
+        <li><a href="http://egumerlock.github.io/blog/git.html">Git, Version Control, and GitHub</a></li>
+        <li><a href="http://egumerlock.github.io/blog/css-concepts.html">Inline vs. Inline-block</a></li>
+        <li><a href="#">Ruby Enumerable Methods: group_by</a></li>
+        <li><a href="#">Independence</a></li>
+      </span>
+    </ul>
+  </div>
+</aside>
+
+<section>
+  <h1 class="blogheader">Ruby Enumerable Methods: group_by</h1>
+  <p><div id="content">
+    <h4 class="by">February 19th, 2016 <br>By Eric Gumerlock </h4>
+    There are number of very useful Enumerable methods in Ruby one of which is pretty useful called <code>.group_by</code>.  It takes an array or also a group of numbers <code>(1..6)</code> and groups the elements of that array by a block.  If no block is given it just returns an enumerator instead.  But you usually won’t be using that way, and you will be passing a block most of the time.  So lets talk about what can go in the block, and the different outcomes you will receive.
+    The first and most intuitive way to use .group_by would be to just <code>.group_by { |e| e }</code> which would return a hash that groups identical elements into values.  The keys would be identical to the value/values of that particular element.
+    Another way we could use this method, say with an array of strings, would be like this <code>.group_by { |e| e[0] }</code> which would sort by the first letter of the string, and group the values that start with that letter into keys corresponding to that first letter.  Here’s an example:
+    <pre><code>
+      birds = ["Golden Eagle", "Gyrfalcon", "American Robin",
+      "Mountain BlueBird", "Mountain-Hawk Eagle"]
+      grouped_by_first_letter = birds.group_by { |s| s[0] }
+
+      # {G=>[Golden Eagle, Gyrfalcon], A=>[American Robin],
+      # M=>[Mountain BlueBird, Mountain-Hawk Eagle]}
+    </code></pre>
+    You can see how this method can be very useful.
+    If we use methods within .group_by such as .length, we will end up with a hash with keys of the length, and values of the elements with that length.
+    As we become more familiar with .group_by, we can start including a case within the block like so:
+    <pre><code>
+      raptors = ["Golden Eagle", "Bald Eagle", "Prairie Falcon", "Peregrine Falcon",
+      "Harpy Eagle", "Red Kite"]
+
+      kinds = raptors.group_by do |species|
+      case species
+      when /.*Eagle.*/
+      Eagle
+      when /.*Falcon.*/
+      Falcon
+      else
+      unknown
+      end
+      end
+
+      # {Eagle=>[Golden Eagle, Bald Eagle, Harpy Eagle],
+      # Falcon=>[Prairie Falcon, Peregrine Falcon], unknown=>[Red Kite]}
+    </code></pre>
+    Lastly, we can use .group_by with a numerical function, which then groups the array elements into keys, and their corresponding solutions to those functions.  For example:
+    <pre><code>
+      (1..6).group_by {|i| i%3}   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}
+    </code></pre>
+    This method seems like it takes awhile to master all the ways that it can be used, but once you get a hang for what it can do, it becomes a useful tool in your Ruby toolbelt.
+  </p></div>
+</section>
+
+
+<footer>
+  <div id="footer">
+    <p><span>© 2016 Eric Gumerlock ||| eric.gumerlock@gmail.com</span>
+      <a href="www.github.com"><img id="problem" src="../imgs/githubxxl.png" height="44" width="44" /></a>
+      <a href="www.linkedin.com"><img src="../imgs/linkedin.png" height="45" width="45" /></a>
+      <a href="www.facebook.com"><img src="../imgs/fb_original.png" height="45" width="45" /></a>
+
+    </p></div>
+
+  </footer>
+
+</body>
+
+
+
+
+</html>
+
+
+<!--
+How was it to wireframe and create an HTML page with a pair?
+It was interesting the input we both had about wireframes, and why we put elements of a page in the positions that we do.  Our wireframe was largely created on my computer using Keynote, which made it more difficult for Jon to directly input his vision, yet everything he said we tried to incorporate.  The HTML was fairly straightforward, we both wrote an HTML file and then shared at the end to see if we got the same result.
+Did you find wireframing to be helpful to your development process?
+I find wireframing to be helpful, yet I can't help but think that the design and the placement go hand in hand.  Depending on the design, I think different elements will look out-of-place.  I think its great to create a plan, however, and in that respect, make sure you have a solid HTML base to begin writing the code to your page.
+What did you and your pair decide made a good wireframe?
+A good wireframe contains Navigation elements that never let you get "stuck" within a webpage, and also give you the ability to go however far back you so desire in your surfing of the site.  Also, a fuller looking webpage is nice, yet it cant have too many elements to overwhelm the user.  By creating different nav elements, we made a fuller looking page without cluttering up the space too much, just filling it up to a nice level.
+What new semantic elements did you learn about (if any)?
+I learned about the aside element today, which is a great function for a side nav bar.  It keeps the code tidy and also mentally is an element which will sit to the side.
+-->
