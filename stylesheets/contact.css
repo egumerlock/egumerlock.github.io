@@ -23,13 +23,13 @@ div:hover {
 
 nav a div:hover {
   background-color: #252B2E;
-  text-shadow: 1px 1px 1px white;
+
   }
 
 #button:hover {
-  color: black;
+  color: #07B1EF;
   box-shadow: 10px 10px 10px #07B1EF;
-  text-shadow: 1px 0px 10px white;
+
 }
 
 .bottomcontent {
