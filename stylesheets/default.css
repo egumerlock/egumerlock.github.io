@@ -117,8 +117,9 @@ div:hover {
 }
 
 #button:hover {
-  color: black;
+  color: #07B1EF;
   box-shadow: 10px 10px 10px #07B1EF;
+  background-color: #252B2E;
   text-shadow: 1px 1px 1px;
 }
 
