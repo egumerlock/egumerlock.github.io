@@ -1,12 +1,4 @@
-#contact_form {
-  color: white;
-  font-family: Fira Sans;
-  padding: 50px;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  border: 4px solid white;
-  box-shadow: 0px 0px 200px   #999999;
-}
+
 
 
 div:hover {
@@ -15,11 +7,6 @@ div:hover {
 
 }
 
-#contact_form:hover {
-  background-color: #252B2E;
-  color: white;
-
-}
 #submit_button {
   font-family: Fira Sans;
 }
@@ -27,7 +14,7 @@ div:hover {
 nav a div:hover {
   background-color: #252B2E;
 
-  }
+}
 
 #button:hover {
   color: #07B1EF;
@@ -48,29 +35,53 @@ nav a div:hover {
 }
 
 .bottomcontent a:hover {
-color: #FAC16B;
+  color: #FAC16B;
 }
 
 #links {
-margin-left: -20px;
+  margin-left: -20px;
   padding-left: 10%;
 }
 
-.projects span {
+.about {
+  border: 4px solid white;
+  font-family: Fira Sans;
+  height: 50%;
+  width: 50%;
+  margin-bottom: 100px;
+  color: white;
+  padding-top: 2%;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  box-shadow: 0px 0px 200px   #999999;
+}
+
+.about:hover {
+  color: white;
+}
+.about span {
   font-family: Fira Sans;
   font-size: 30px;
--webkit-transform:scale(1,1.23);
-letter-spacing: 10px;
-text-shadow: 0px 0px 2px #08b7f7;
-color: white;
+  -webkit-transform:scale(1,1.23);
+  letter-spacing: 12px;
+  text-shadow: 0px 0px 2px #08b7f7;
+  color: white;
+
 }
 
 #center-div {
   margin: 0 auto;
   width: 1070px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 
 
 
+}
+
+.tab {
+  margin-left: 30px;
 
 }
