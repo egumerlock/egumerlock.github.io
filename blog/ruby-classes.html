@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Blog Post #1</title>
+</head>
+
+<body>
+  <section class="header">
+    <h1> ERIC GUMERLOCK <span> WEB DEVELOPER</span></h1>
+  </section>
+  <nav id="center-div">
+    <a href="http://egumerlock.github.io/index"><div id="button">HOME</div></a>
+    <a href="#"><div id="button">PROJECTS</div></a>
+    <a href="http://egumerlock.github.io/about"><div id="button">BIO</div></a>
+    <a href="http://egumerlock.github.io/contact"><div id="button">CONTACT</div></a>
+    <a href="http://egumerlock.github.io/blog/"><div id="button">BLOG</div></a>
+  </nav>
+
+
+  <nav><section id="secondarynav">
+    <p><a href="http://egumerlock.github.io/index">HOME</a> < <a href="http://egumerlock.github.io/blog/">BLOG INDEX</a> < <span>Classes in Ruby</span></p></section>
+  </nav>
+
+  <aside>
+    <div id="sidebar">
+      <h6><span id="sidebarheader">OTHER RECENT POSTS</span></h6>
+      <ul><span id="sidebarlinks">
+        <li><a href="http://egumerlock.github.io/blog/git.html">Git and GitHub</a></li>
+        <li><a href="http://egumerlock.github.io/blog/css-concepts.html">Inline vs. Inline-block</a></li>
+        <li><a href="http://egumerlock.github.io/blog/arrays-hashes.html">Arrays and Hashes</a></li>
+        <li><a href="http://egumerlock.github.io/blog/enumerable-methods.html">Ruby Enumerable Methods</a></li>
+      </span>
+    </ul>
+  </div>
+</aside>
+
+<section>
+  <h1 class="blogheader">Classes in Ruby</h1>
+  <p><div id="content">
+    <h4 class="by">February 25th, 2016 <br>By Eric Gumerlock </h4>
+    Using classes can be a confusing step in the growth a Ruby developer.  Classes play by different rules, namely instance variables, and instance methods.  Lets start with an example class:
+    <pre><code>
+      class Car
+      end
+
+      corvette = Car.new
+    </code></pre>
+
+    This code creates a new class Car and creates one new Car, a corvette.  We haven’t introduced instance variables or instance methods yet but that comes next:
+    <pre><code>
+      class Car
+      def initialize(car)
+      @car = car
+      end
+      end
+
+      corvette = Car.new(“corvette”)
+    </code></pre>
+
+    Each class requires an initialize method, and it generally a good idea to create your instance variables in here.  Here, the initialize method takes a car, and sets it equal to the <code>@car</code> instance variable.  This variable can be used in any of the methods within the class.  Likewise, instance methods or methods that are within the class, can be called from any other method within the class, simply by typing the name of the method.  Let’s see:
+    <pre><code>
+      class Car
+      def initialize(car)
+      @car = car
+      end
+
+      def drive
+      puts "You are driving a #{@car}!"
+      end
+
+      def relaxing_sunday
+      drive
+      puts "On a relaxing sunday afternoon."
+      end
+      end
+
+      corvette = Car.new("corvette")
+
+      corvette.relaxing_sunday
+    </code></pre>
+    Easy right? We defined an instance variable that is able to be called from anywhere within the class, as well as two instance methods, one of which was called from the other.  There is an even easier way to create instance variables, and at the same time an instance method.  These are the <code>attr_accessor</code> <code>attr_reader</code> <code>attr_writer</code> used like so:
+    <pre><code>
+      class Car
+      attr_accessor :age
+      def initialize(car)
+      @car = car
+      end
+
+      def drive
+      puts "You are driving a #{@car}!"
+      end
+
+      def relaxing_sunday
+      drive
+      puts "On a relaxing sunday afternoon."
+      end
+      end
+
+      corvette = Car.new("corvette")
+
+      corvette.relaxing_sunday
+      p corvette.age
+
+      ---------------------------------------
+      Eric Gumerlock running 21 lines of Ruby
+      ---------------------------------------
+      You are driving a corvette!
+      On a relaxing sunday afternoon.
+      nil
+    </code></pre>
+
+    attr_accessor :age specifically writes these methods, which are both attr_writer and attr_reader respectively:
+    <pre><code>
+      def age=(value)
+      @age = value
+      end
+
+      def age
+      @age
+      end
+    </code></pre>
+
+    This creates two instance methods as well as two instance variables which can be called anywhere within the class, and the methods outside of the class on an object with a car class.  We didn’t set the corvette’s age to anything, so running <code>corvette.age</code> will only return nil, but we can set it since we gave it the attr_writer instance method.
+    <pre><code>
+      class Car
+      attr_accessor :age
+      def initialize(car)
+      @car = car
+      end
+
+      def drive
+      puts "You are driving a #{@car}!"
+      end
+
+      def relaxing_sunday
+      drive
+      puts "On a relaxing sunday afternoon."
+      puts "The car is #{@age} years old."
+      end
+      end
+
+      corvette = Car.new("corvette")
+      corvette.age=15
+      corvette.relaxing_sunday
+
+      p corvette.age
+
+      ---------------------------------------
+      Eric Gumerlock running 22 lines of Ruby
+      ---------------------------------------
+      You are driving a corvette!
+      On a relaxing sunday afternoon.
+      The car is 15 years old.
+      15
+
+    </code></pre>
+    Here I proved to you I could call the instance variable age in the instance method relaxing_sunday, even though we never specifically set it with our old notation.  We used attr_accessor :age to do it.  I also showed how to set the age, and printed the age just to show you that it did actually change the variable, and how we have an incorporated reader method.  Pretty cool stuff right? Now you try it.
+  </p></div>
+</section>
+
+
+<footer>
+  <div id="footer">
+    <p><span>© 2016 Eric Gumerlock ||| eric.gumerlock@gmail.com</span>
+      <a href="www.github.com"><img id="problem" src="../imgs/githubxxl.png" height="44" width="44" /></a>
+      <a href="www.linkedin.com"><img src="../imgs/linkedin.png" height="45" width="45" /></a>
+      <a href="www.facebook.com"><img src="../imgs/fb_original.png" height="45" width="45" /></a>
+
+    </p></div>
+
+  </footer>
+
+</body>
+
+
+
+
+</html>
+
+
+<!--
+How was it to wireframe and create an HTML page with a pair?
+It was interesting the input we both had about wireframes, and why we put elements of a page in the positions that we do.  Our wireframe was largely created on my computer using Keynote, which made it more difficult for Jon to directly input his vision, yet everything he said we tried to incorporate.  The HTML was fairly straightforward, we both wrote an HTML file and then shared at the end to see if we got the same result.
+Did you find wireframing to be helpful to your development process?
+I find wireframing to be helpful, yet I can't help but think that the design and the placement go hand in hand.  Depending on the design, I think different elements will look out-of-place.  I think its great to create a plan, however, and in that respect, make sure you have a solid HTML base to begin writing the code to your page.
+What did you and your pair decide made a good wireframe?
+A good wireframe contains Navigation elements that never let you get "stuck" within a webpage, and also give you the ability to go however far back you so desire in your surfing of the site.  Also, a fuller looking webpage is nice, yet it cant have too many elements to overwhelm the user.  By creating different nav elements, we made a fuller looking page without cluttering up the space too much, just filling it up to a nice level.
+What new semantic elements did you learn about (if any)?
+I learned about the aside element today, which is a great function for a side nav bar.  It keeps the code tidy and also mentally is an element which will sit to the side.
+-->
