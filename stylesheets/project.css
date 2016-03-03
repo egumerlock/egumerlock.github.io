@@ -1,0 +1,84 @@
+#contact_form {
+  color: white;
+  font-family: Fira Sans;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 4px solid white;
+  box-shadow: 0px 0px 200px   #999999;
+}
+
+#contact_form img {
+  margin-top: 10px;
+  border: 2px solid white;
+  margin-bottom: 30px;
+}
+
+#contact_form img:hover {
+  box-shadow: 0px 0px 50px #FAC16B;
+}
+div:hover {
+  color: #07B1EF;
+  background-color: #252B2E;
+
+}
+
+#contact_form:hover {
+  background-color: #252B2E;
+  color: white;
+
+}
+#submit_button {
+  font-family: Fira Sans;
+}
+
+nav a div:hover {
+  background-color: #252B2E;
+
+  }
+
+#button:hover {
+  color: #07B1EF;
+  box-shadow: 10px 10px 10px #07B1EF;
+
+}
+
+.bottomcontent {
+  text-align: center;
+  padding-top: 50px;
+  margin-left: -180px;
+}
+.bottomcontent a {
+  font-family: Fira Sans;
+  margin-left: -20px;
+  padding-left: 6.5%;
+  text-decoration: none;
+}
+
+.bottomcontent a:hover {
+color: #FAC16B;
+}
+
+#links {
+margin-left: -20px;
+  padding-left: 10%;
+}
+
+.projects span {
+  font-family: Fira Sans;
+  font-size: 30px;
+-webkit-transform:scale(1,1.23);
+letter-spacing: 10px;
+text-shadow: 0px 0px 2px #08b7f7;
+color: white;
+}
+
+#center-div {
+  margin: 0 auto;
+  width: 1070px;
+  padding-bottom: 100px;
+
+
+
+
+}
