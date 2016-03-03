@@ -157,6 +157,9 @@ body section h3 div {
 
 
 }
+a {
+  text-decoration: none;
+}
 
 #horizontal {
   width: 1100px;
