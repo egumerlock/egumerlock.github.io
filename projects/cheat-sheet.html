@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet.css">
+  <title>DBC Cheat Sheet</title>
+</head>
+
+
+<body>
+  <section id="content">
+    <h1 class="header"> DBC CHEAT SHEET</h1>
+    <h2>Ruby BASICS</h1>
+      <div class="main">
+        <p>
+          <p id="term"> irb </p>
+          opens an instance of interactive Ruby in the command line<br>
+          <p id="term"> ruby </p>
+          runs a ruby file through the command line
+          <p id="term"> Comments </p>
+          Begin an inline comment with #
+          Begin a comment block with <code>=begin</code> and end the block with <code>=end</code>
+          <p id="term">math operators + - * /</p>
+          <pre><code>
+            5 + 5 = 10
+            5 - 5 = 0
+            5 * 5 = 25
+            5 / 5 = 1
+          </pre></code>
+          <p id="term"> p </p>
+          <code>p "Hello World!" #Prints to console</code>
+          <p id="term"> puts </p>
+          <code>puts "Hello World!" #Prints to console and includes a line break after</code>
+          <p id="term"> &&, ||, ! </p>
+          <pre><code>
+            true && true
+            => true
+            true && false
+            => false
+            false and true
+            => false
+            false and false
+            => false
+
+            true || true
+            => true
+            true || false
+            => true
+            false or true
+            => true
+            false or false
+            => false
+
+            !true
+            => false
+            not false
+            => true
+          </pre></code>
+          <p id="term"> Setting Variables</p>
+          <pre><code>
+            a = 5
+            b = 0
+            a + b = 5
+            a - b = 5
+          </pre></code>
+
+          <p id="term">Comparison Operators</p>
+          <pre><code>
+            x == y # returns true if two things are equal
+            x != y # returns true if two things are not equal
+            x <= y # returns true if x is less than or equal to y
+            x >= y # returns true if x is greater than or equal to y
+            x < y # returns true if x is less than y
+            x > y # returns true if x is greater than y
+
+            5 == 5
+            => true
+            5 != 5
+            => false
+            2 <= 2
+            => true
+            2 >= 3
+            => false
+            1 < 2
+            => true
+            1 > 2
+            => false
+          </pre></code>
+          <p id="term">Ternary Operator</p>
+          This is a shorthand statement for a simple if...else statement. It is a useful tool in situations where you have an extremely simple if...else statement where you are trying to assign a value to a variable.
+          <pre><code>
+            grade = 88
+            status = grade >= 70 ? "pass" : "fail"
+            => pass
+          </pre></code>
+        </p>
+      </div>
+      <div class="sidebar">
+        <p>
+          <p id="term"> if, unless, elsif, and else </p>
+          Ruby includes an if statement that can be used to manage a program's control flow. The statement takes a boolean expression and executes certain code only if the boolean expression evaluates to true.
+          <pre><code>
+            if true
+            puts "I get printed!"
+            end
+          </pre></code>
+          This is the opposite of an if statement. The statement takes a boolean expression and executes certain code only if the boolean expression evaluates to false.
+          <pre><code>
+            unless false
+            puts "I get printed!"
+            end
+          </pre></code>
+          A conditional statement used to manage a program's control flow. The statement must be paired with an if or unless block and takes a boolean expression. It runs certain code only if the previous conditional statements do not run and its boolean expression evaluates to true. it is equivalent to writing an else statement that has an if statement in its block.
+          <pre><code>
+            x = 5
+            if x > 5
+            print "I am big!"
+            elsif x == 5
+            print "I am medium!"
+            else
+            print "I am small!"
+            end
+          </pre></code>
+
+          <p id="term">Methods</p>
+          A Ruby method is used to create a function, a block of reusable code. Ruby methods can be created using the syntax:
+          <pre><code>
+            def sum(x,y)
+            x + y
+            end
+
+            sum(13, 379)
+            => 392
+          </pre></code>
+          <p id="term">Strings</p>
+          Strings are used for storing and manipulating text in Ruby. Strings are written between quotation marks. Both single (') and double (") quotes are supported, but quotes at each end of a single string must match (no "strings' or 'strings")!
+          <pre><code>
+            my_name = 'Eric'
+            that_computer = "Eric's Computer" #this syntax is allowed
+          </pre></code>
+          <p id="term">Switch statement</p>
+          Acts like a big if / else if / else chain. Checks a value against a list of cases, and executes the first case that is true. If it does not find a match, it attempts the default case designated by an else statement. If there is not a default case, then it exits the statement. Unlike languages like JavaScript, Ruby switch statements have no fall through and automatically break. Instead, cases can be comma delimited.
+          <pre><code>
+            a = ["4"]
+            case a
+            when 1..4, 5
+            puts "It's between 1 and 5"
+            when 6
+            puts "It's 6"
+            when String
+            puts "You passed a string"
+            else
+            puts "You gave me #{a} -- I have no idea what to do with that."
+            end
+
+          </pre></code>
+          <p id="term">Symbols</p>
+          In Ruby, a symbol is simply a name used in your program. One of the main uses for Ruby symbols is hash keys, especially if you would otherwise use the same string as a hash key over and over. Ruby will create an (almost) unlimited number of string instances for all your hash keys, but will only keep one copy of a symbol in memory at a time. This can really save memory for your programs in the long run.
+          <pre><code>
+            fox1 = :fox
+            fox2 = :fox
+
+            fox1.object_id
+            => 430488
+            fox2.object_id
+            => 430488
+          </pre></code>
+        </p>
+      </div>
+      <hr>
+      <h2>Looping in Ruby and JavaScript</h1>
+        <div class="main">
+          <p id="term">Looping in Ruby</p>
+          In Ruby, we have a number of ways to perform loop functions. You must be careful to end loops or else your program will be stuck in an infinite loop and likely crash.  Below are descriptions of each statment but here they are listed: while, until, for, next, and .each.
+        </div>
+        <div class="sidebar">
+        </div>
+      <hr>
+      </section>
+
+
+
+    </body>
+    </html>
